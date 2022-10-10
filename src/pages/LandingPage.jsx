@@ -1,4 +1,6 @@
-import { Box, Heading } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
+import BelowNavbarBanner from "../components/landing-page/BelowNavbarBanner";
+import PopularCategory from "../components/landing-page/PopularCategory";
 
 
 const LandingPage = ()=>{
@@ -6,7 +8,8 @@ const LandingPage = ()=>{
 
     return(
         <Box>
-            <Heading>Hello Zappos</Heading>
+            <BelowNavbarBanner/> 
+            <PopularCategory/>
         </Box>
     )
 }

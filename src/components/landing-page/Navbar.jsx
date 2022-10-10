@@ -2,12 +2,14 @@ import { Box, Button, Flex, Image, Input, Menu, MenuButton, MenuItem, MenuList, 
 import { ChevronDownIcon } from '@chakra-ui/icons'
 
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { CgProfile } from 'react-icons/cg';
+import DrawerExample from "./Smallscreendrawer";
 
 const Navbar = () => {
 
 
     return (
-        <Box>
+        <Box w='100%'>
             <Tabs variant='unstyled'>
                 <TabList>
                     <Tab _selected={{ color: 'white', bg: 'blue.500' }}
@@ -58,7 +60,7 @@ const Navbar = () => {
                     mr={5}
                     color='white'
                     alignItems='center'
-
+                    display={{base:'none', sm:'none', md:'none', lg:'block', xl:'block'}}
                 >
                     Every Zappos order comes with FAST, FREE Shipping, plus a FREE 365-Day Return Policy! More About Shipping and Returns
                 </Text>
@@ -66,20 +68,30 @@ const Navbar = () => {
 
 
             <Flex bg="gray.50">
-                <Flex p='4'>
+                <Flex p='4' w='60%'
+                >
+                    <Box
+                    display={{base:'flex', sm:'flex', md:'flex', lg:'none', xl:'none'}}
+                    >
+                    <DrawerExample/>
+                    </Box>
+
                     <Image
                         h="40px" m={2}
                         src="https://m.media-amazon.com/images/G/01/zappos/melody/zapposPBS._CB1509642213_.svg" />
 
                     <Input
+                    display={{base:'none', sm:'none', md:'none', lg:'flex', xl:'flex'}}
                         border='1px solid'
                         borderColor='black'
-                        w={400}
+                        w='80%'
                         placeholder='Gaurav, search for shoes, clothes, etc'
                         m={2}
                     />
 
                     <Button
+                    display={{base:'none', sm:'none', md:'none', lg:'flex', xl:'flex'}}
+                        // p={5}
                         bg='#003953'
                         color='white'
                         _hover={{ bg: "blue.500", color: 'white' }}
@@ -90,7 +102,11 @@ const Navbar = () => {
                 <Spacer />
 
                 <Box m={4} display={{base:'block', sm:'block', md:'block', lg:'none', xl:'none'}}>
-                    <AiOutlineShoppingCart size={50}/>
+                    <CgProfile size={40}/>
+                </Box>
+
+                <Box m={4} display={{base:'block', sm:'block', md:'block', lg:'none', xl:'none'}}>
+                    <AiOutlineShoppingCart size={40}/>
                 </Box>
 
                 <Box p='4' display={{base:'none', sm:'none', md:'none', lg:'block', xl:'block'}}>
@@ -103,6 +119,27 @@ const Navbar = () => {
 
                 {/* . 5 ITEMS IN CART after login show this */}
             </Flex>
+
+
+            <Flex p='4' w='100%'
+                display={{base:'flex', sm:'flex', md:'flex', lg:'none', xl:'none'}}
+                >
+                    <Input
+                        border='1px solid'
+                        borderColor='black'
+                        w='95%'
+                        placeholder='Gaurav, search for shoes, clothes, etc'
+                        m={2}
+                    />
+
+                    <Button
+                        // p={5}
+                        bg='#003953'
+                        color='white'
+                        _hover={{ bg: "blue.500", color: 'white' }}
+                        m={2}
+                    >SEARCH</Button>
+                </Flex>
             
             <Flex bg="gray.100" display={{base:'none', sm:'none', md:'none', lg:'flex', xl:'flex'}}>
                 <Flex>
@@ -727,7 +764,7 @@ const Navbar = () => {
             </Flex>
 
             <Box bg='#e4f0f6' textAlign='center' p={1}>
-            Virtual Try-On Just Launched: Try on shoes IRL! 👟 Learn More
+                Virtual Try-On Just Launched: Try on shoes IRL! 👟 Learn More
             </Box>
 
         </Box>
