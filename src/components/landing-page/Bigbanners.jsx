@@ -5,7 +5,7 @@ const Bigbanners = ()=>{
 
 
     return (
-        <Box>
+        <Box mb='80px'>
             
 
                 <Grid w='90%' m='auto' mt='60px'
