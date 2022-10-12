@@ -4,6 +4,7 @@ import Bigbanner2 from "../components/landing-page/Bigbanner2";
 import Bigbanners from "../components/landing-page/Bigbanners";
 import PopularCategory from "../components/landing-page/PopularCategory";
 import PopularItems from "../components/landing-page/PopularItems";
+import TrandingBrands from "../components/landing-page/TrendingBrands";
 
 
 const LandingPage = ()=>{
@@ -16,6 +17,7 @@ const LandingPage = ()=>{
             <Bigbanners/>
             <PopularItems/>
             <Bigbanner2/>
+            <TrandingBrands/>
         </Box>
     )
 }
